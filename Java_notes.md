@@ -1,3 +1,4 @@
+````js
 **script tag is to be written after the body tag.
 This is so because the browsers work from top to bottom , also js takes in elements from the body to maipulate if we were to guve script before body the js wil not be able to identify tyhe element therefore giving an eroor.
 So we write script tag after body tag so that the browser can first load the body and then the js can manipulate the elements of the body.**
@@ -342,3 +343,4 @@ there are various ways of doing This
 3. document.querySelectorAll("selector")```
 
 ---
+````
