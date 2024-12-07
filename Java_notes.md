@@ -1,4 +1,4 @@
-**script tag is to be written after the body tag.
+````**script tag is to be written after the body tag.
 This is so because the browsers work from top to bottom , also js takes in elements from the body to maipulate if we were to guve script before body the js wil not be able to identify tyhe element therefore giving an eroor.
 So we write script tag after body tag so that the browser can first load the body and then the js can manipulate the elements of the body.**
 
@@ -72,16 +72,16 @@ like obj{
 
 for example;
 
-````JavaScript
+JavaScript
 var obj = {
     1:"abc",
     2:"ghi",
     3:"jkl"
-};```
+};
 
-```
+
 var playernumb=2;
-var player=obj[player numb];```
+var player=obj[player numb];
 
 if we console.log(player)
 it will print "ghi"..
@@ -115,7 +115,7 @@ This can be done using both notations:
 
 We can use objects for look ups instead of using switch statements like following
 
-```function lookup(val){
+function lookup(val){
 
     var result="";
 
@@ -137,12 +137,12 @@ We can use objects for look ups instead of using switch statements like followin
         result="not found";
 
     }
-}```
+}
 
 instead of the switch statements we can use the concept of objects
 like following
 
-```function lookup(val){
+function lookup(val){
     var look ={
         "a":"alpha",
         "b":"beta",
@@ -151,11 +151,11 @@ like following
         };
     res= look[val];
     return res || "not found";
-}```
+}
 
 ==>Testing objects for properties
 1.in operator
-```if("attribute1" in obj){
+if("attribute1" in obj){
     console.log("obj has attribute1");
     }
 else
@@ -181,7 +181,7 @@ if(keys.indexOf("attribute1")>-1){
 else
 {
     console.log("obj does not have attribute1");
-    }```
+    }
 
 ==>Manipulating complex objects
 
@@ -189,7 +189,7 @@ we can create an array with multiple objects in it seperated by comma","
 like following
 
 
-```var people = [
+var people = [
 
     {name: "John",
      age:  (new Date()).getFullYear() - 1990
@@ -226,7 +226,7 @@ var storage={
 
     },
 
-};```
+};
 We can access the nested objects like following
 storage.car.inside["glove box"] or storage.car.outside.trunk
 
@@ -234,7 +234,7 @@ storage.car.inside["glove box"] or storage.car.outside.trunk
 ==>nested arrays
 We can create nested arrays like following
 
-```var myPlants =[
+var myPlants =[
     {
         type: "flowers",
     list: [
@@ -254,7 +254,7 @@ We can create nested arrays like following
         ]
     }
 
-];```
+];
 
 We can access the nested arrays like following
 myPlants[0].list[0] or myPlants[1].list[1]
@@ -342,7 +342,7 @@ Rest operator
   there are various ways of doing This
   1. document.getElementById("id") ----class if class----
   2. document.querySelector("selector") ----#selector if id .selector if class----
-  3. document.querySelectorAll("selector")
+  3. document.querySelectorAll("selector")```
   ------------------------------------------
 
 ````
