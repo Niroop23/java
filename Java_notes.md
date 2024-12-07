@@ -1,4 +1,4 @@
-````**script tag is to be written after the body tag.
+**script tag is to be written after the body tag.
 This is so because the browsers work from top to bottom , also js takes in elements from the body to maipulate if we were to guve script before body the js wil not be able to identify tyhe element therefore giving an eroor.
 So we write script tag after body tag so that the browser can first load the body and then the js can manipulate the elements of the body.**
 
@@ -74,11 +74,10 @@ for example;
 
 JavaScript
 var obj = {
-    1:"abc",
-    2:"ghi",
-    3:"jkl"
+1:"abc",
+2:"ghi",
+3:"jkl"
 };
-
 
 var playernumb=2;
 var player=obj[player numb];
@@ -95,7 +94,6 @@ we can update the value of 2 by
 
 obj[2]="new value";
 
-
 ==>adding new properties to an existng object
 
 This can be done using both notations:
@@ -104,14 +102,13 @@ This can be done using both notations:
 
 2.obj['newAttribute']="new value";
 
-
 ==>Delete properties from an object
 
 1.delete obj.attribute1;
 
 2.delete obj['attribute1'];
 
---------------
+---
 
 We can use objects for look ups instead of using switch statements like following
 
@@ -137,57 +134,57 @@ function lookup(val){
         result="not found";
 
     }
+
 }
 
 instead of the switch statements we can use the concept of objects
 like following
 
 function lookup(val){
-    var look ={
-        "a":"alpha",
-        "b":"beta",
-        "c":"gamma"
+var look ={
+"a":"alpha",
+"b":"beta",
+"c":"gamma"
 
         };
     res= look[val];
     return res || "not found";
+
 }
 
 ==>Testing objects for properties
 1.in operator
 if("attribute1" in obj){
-    console.log("obj has attribute1");
-    }
+console.log("obj has attribute1");
+}
 else
 {
-    console.log("obj does not have attribute1");
-    }
+console.log("obj does not have attribute1");
+}
 
 2.hasOwnProperty() method
 if(obj.hasOwnProperty("attribute1")){
-    console.log("obj has attribute1");
-    }
+console.log("obj has attribute1");
+}
 else
 {
-    console.log("obj does not have attribute1");
-    }
-
+console.log("obj does not have attribute1");
+}
 
 3.Object.keys() method
 var keys = Object.keys(obj);
 if(keys.indexOf("attribute1")>-1){
-    console.log("obj has attribute1");
-    }
+console.log("obj has attribute1");
+}
 else
 {
-    console.log("obj does not have attribute1");
-    }
+console.log("obj does not have attribute1");
+}
 
 ==>Manipulating complex objects
 
 we can create an array with multiple objects in it seperated by comma","
 like following
-
 
 var people = [
 
@@ -199,8 +196,8 @@ var people = [
     age: (new Date()).getFullYear() - 1995}
 
 ];
-    We can access the objects in the array using their index like `people[0].name` or
-    `people[1].age`
+We can access the objects in the array using their index like `people[0].name` or
+`people[1].age`
 
     We can also use for loop to iterate over the array of objects like following
 
@@ -208,16 +205,15 @@ var people = [
         console.log(people[i].name + " is " + people[i].age + " years)
         }
 
-
 ==>Nested objects
 We can create nested objects like following
 var storage={
-    "car": {
-        "inside":
-        {
-            "glove box":"maps",
-            "passenger seat":"crumbs"
-        }
+"car": {
+"inside":
+{
+"glove box":"maps",
+"passenger seat":"crumbs"
+}
 
         "outside":
         {
@@ -230,17 +226,16 @@ var storage={
 We can access the nested objects like following
 storage.car.inside["glove box"] or storage.car.outside.trunk
 
-
 ==>nested arrays
 We can create nested arrays like following
 
 var myPlants =[
-    {
-        type: "flowers",
-    list: [
-        "rose",
-        "tulip",
-        "daisy"
+{
+type: "flowers",
+list: [
+"rose",
+"tulip",
+"daisy"
 
         ]
     },
@@ -259,14 +254,13 @@ var myPlants =[
 We can access the nested arrays like following
 myPlants[0].list[0] or myPlants[1].list[1]
 
---------------------------------------------
+---
 
 generate random fractions
-Math.random() returns a random number between   0 (inclusive) and 1 (exclusive).
+Math.random() returns a random number between 0 (inclusive) and 1 (exclusive).
 
 generating random whole numbers
-Math.floor(Math.random() * 10) returns a random whole number between 0 and 9.[inclusiv  e both]
-
+Math.floor(Math.random() \* 10) returns a random whole number between 0 and 9.[inclusiv e both]
 
 parseint function
 The parseInt() function parses a string and returns an integer. If the string does not contain a number
@@ -276,73 +270,75 @@ radix
 The radix parameter is used to specify the base of the number in the string. For example, if
 the radix is 16, the function will parse the string as a hexadecimal number.
 
-default is base 10.
-------------------------------------------
+## default is base 10.
 
 Ternary operator
 The ternary operator is a shorthand way of writing an if-else statement. It takes three arguments
 condition ? trueValue : falseValue
-------------------------------------------
 
+---
 
 Multiple ternary operator
 var age = 18;
-var message = (age >= 18) ? "You are eligible to vote" : (age  >= 16) ? "You are eligible to drive" : "You are not eligible to vote
+var message = (age >= 18) ? "You are eligible to vote" : (age >= 16) ? "You are eligible to drive" : "You are not eligible to vote
 
-or drive";
-------------------------------------------
+## or drive";
 
 var keyword vs let keyword
 
-var keyword is function scoped whereas let keyword is block scoped.
-------------------------------------------
+## var keyword is function scoped whereas let keyword is block scoped.
+
 "use strict" keyword
 
 The "use strict" keyword is used to enable strict mode in JavaScript. In strict mode, JavaScript
 shows more errors and exceptions, and it does not allow some actions that are allowed in
 non-strict mode.
-------------------------------------------
+
+---
 
 Const keyword
 
 The const keyword is used to declare a constant. A constant is a variable that cannot be
 changed once it is declared. Constants are block-scoped, much like variables declared using the let keyword
-------------------------------------------
+
+---
 
 Mutating an array declared with const
 
 Although the array itself cannot be reassigned, its elements can be changed. This is because
 the const keyword only prevents the reassignment of the variable, not the mutation of its
 value.using bracket notation.
-------------------------------------------
 
+---
 
 ==>preventing object mutation
 Object.freeze("object name") method can be used to prevent an object from being mutated.
-------------------------------------------
 
- Arrow function
- An arrow function is a concise way to write a function expression. It is written with the
- syntax ()=>{code}. Arrow functions are often used as callbacks or when you need to create
- a small, one-time-use function.
+---
 
+Arrow function
+An arrow function is a concise way to write a function expression. It is written with the
+syntax ()=>{code}. Arrow functions are often used as callbacks or when you need to create
+a small, one-time-use function.
 
- like
- var add = (a, b) => a + b;
- ------------------------------------------
+like
+var add = (a, b) => a + b;
+
+---
 
 Rest operator
- The rest operator is used to get the rest of the elements in an array or object. It is
- denoted by three dots (...). It is often used in function parameters to get the rest of the
- arguments.
- ------------------------------------------
+The rest operator is used to get the rest of the elements in an array or object. It is
+denoted by three dots (...). It is often used in function parameters to get the rest of the
+arguments.
 
-  grabbing a html element in JavaScript
+---
 
-  there are various ways of doing This
-  1. document.getElementById("id") ----class if class----
-  2. document.querySelector("selector") ----#selector if id .selector if class----
-  3. document.querySelectorAll("selector")```
-  ------------------------------------------
+grabbing a html element in JavaScript
 
-````
+there are various ways of doing This
+
+1. document.getElementById("id") ----class if class----
+2. document.querySelector("selector") ----#selector if id .selector if class----
+3. document.querySelectorAll("selector")```
+
+---
